@@ -5,21 +5,27 @@
   
   <title>Javascript 中 console 的用法 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Javascript 中 console 的用法在调试 JS 代码时，很多人倾向于使用 alert() 或者 console.log() 方法来输出信息，正如某些 Java 程序员喜欢在调试代码时使用 System.out.println() 输出信息一样。但与 Java 输出不一样的是， console 对象拥有多种方法可以更好的呈现信息，从而给代码调试带来方便。根据常用程度，列出以下几种 co">
+  <meta name="description" content="在调试 JS 代码时，很多人倾向于使用 alert() 或者 console.log() 方法来输出信息，正如某些 Java 程序员喜欢在调试代码时使用 System.out.println() 输出信息一样。但与 Java 输出不一样的是， console 对象拥有多种方法可以更好的呈现信息，从而给代码调试带来方便。根据常用程度，列出以下几种 console 对象的方法：
+
+console.lo">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Javascript 中 console 的用法">
 <meta property="og:url" content="http://yoursite.com/2015/10/09/console-in-JavaScript/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Javascript 中 console 的用法在调试 JS 代码时，很多人倾向于使用 alert() 或者 console.log() 方法来输出信息，正如某些 Java 程序员喜欢在调试代码时使用 System.out.println() 输出信息一样。但与 Java 输出不一样的是， console 对象拥有多种方法可以更好的呈现信息，从而给代码调试带来方便。根据常用程度，列出以下几种 co">
+<meta property="og:description" content="在调试 JS 代码时，很多人倾向于使用 alert() 或者 console.log() 方法来输出信息，正如某些 Java 程序员喜欢在调试代码时使用 System.out.println() 输出信息一样。但与 Java 输出不一样的是， console 对象拥有多种方法可以更好的呈现信息，从而给代码调试带来方便。根据常用程度，列出以下几种 console 对象的方法：
+
+console.lo">
 <meta property="og:image" content="http://i.imgur.com/vJJoNFM.png">
 <meta property="og:image" content="http://i.imgur.com/zvnvFOx.png">
 <meta property="og:image" content="http://i.imgur.com/IivvkKr.png">
 <meta property="og:image" content="http://i.imgur.com/1qwQFNl.png">
 <meta property="og:image" content="http://i.imgur.com/t1DjKDc.png">
-<meta property="og:updated_time" content="2015-10-09T01:31:28.677Z">
+<meta property="og:updated_time" content="2015-10-09T01:33:44.138Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Javascript 中 console 的用法">
-<meta name="twitter:description" content="Javascript 中 console 的用法在调试 JS 代码时，很多人倾向于使用 alert() 或者 console.log() 方法来输出信息，正如某些 Java 程序员喜欢在调试代码时使用 System.out.println() 输出信息一样。但与 Java 输出不一样的是， console 对象拥有多种方法可以更好的呈现信息，从而给代码调试带来方便。根据常用程度，列出以下几种 co">
+<meta name="twitter:description" content="在调试 JS 代码时，很多人倾向于使用 alert() 或者 console.log() 方法来输出信息，正如某些 Java 程序员喜欢在调试代码时使用 System.out.println() 输出信息一样。但与 Java 输出不一样的是， console 对象拥有多种方法可以更好的呈现信息，从而给代码调试带来方便。根据常用程度，列出以下几种 console 对象的方法：
+
+console.lo">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -87,7 +93,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="Javascript_中_console_的用法">Javascript 中 console 的用法</h1><p>在调试 JS 代码时，很多人倾向于使用 <code>alert()</code> 或者 <code>console.log()</code> 方法来输出信息，<br>正如某些 Java 程序员喜欢在调试代码时使用 <code>System.out.println()</code> 输出信息一样。<br>但与 Java 输出不一样的是， console 对象拥有多种方法可以更好的呈现信息，<br>从而给代码调试带来方便。根据常用程度，列出以下几种 console 对象的方法：</p>
+        <p>在调试 JS 代码时，很多人倾向于使用 <code>alert()</code> 或者 <code>console.log()</code> 方法来输出信息，<br>正如某些 Java 程序员喜欢在调试代码时使用 <code>System.out.println()</code> 输出信息一样。<br>但与 Java 输出不一样的是， console 对象拥有多种方法可以更好的呈现信息，<br>从而给代码调试带来方便。根据常用程度，列出以下几种 console 对象的方法：</p>
 <ul>
 <li><code>console.log()</code></li>
 <li><code>console.debug()</code>、<code>console.info()</code>、<code>console.warn()</code> 与 <code>console.error()</code></li>
@@ -184,7 +190,7 @@ console.assert(arr.length === <span class="number">4</span>);
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/10/09/console-in-JavaScript/" data-id="cifiz9kb4000258n6by36dt4y" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/10/09/console-in-JavaScript/" data-id="cifizchif000224n6lgdvesul" class="article-share-link">Share</a>
       
       
     </footer>
@@ -193,10 +199,19 @@ console.assert(arr.length === <span class="number">4</span>);
     
 <nav id="article-nav">
   
+    <a href="/2015/10/09/JavaScript-for-loop/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          JS中的 for 循环
+        
+      </div>
+    </a>
   
-    <a href="/2015/10/09/JavaScript-for-loop/" id="article-nav-older" class="article-nav-link-wrap">
+  
+    <a href="/2015/10/09/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">JS中的 for 循环</div>
+      <div class="article-nav-title">Hello World</div>
     </a>
   
 </nav>
@@ -230,11 +245,11 @@ console.assert(arr.length === <span class="number">4</span>);
       <ul>
         
           <li>
-            <a href="/2015/10/09/console-in-JavaScript/">Javascript 中 console 的用法</a>
+            <a href="/2015/10/09/JavaScript-for-loop/">JS中的 for 循环</a>
           </li>
         
           <li>
-            <a href="/2015/10/09/JavaScript-for-loop/">JS中的 for 循环</a>
+            <a href="/2015/10/09/console-in-JavaScript/">Javascript 中 console 的用法</a>
           </li>
         
           <li>
