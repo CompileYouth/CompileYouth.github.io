@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Javascript 中的 Array 操作 | CompileYouth</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Javascript 中的 Array 操作在各种语言中，数组总是一个比较重要的数据结构，Javascript 中的 Array 也不例外。Javascript 中的 Array 提供了一系列方法可以更好地让我们操作 Array 中的元素，下面我们就来看看这些操作方法。
+Array 之基本操作在基本操作部分，我们约定，加粗的方法可以改变数组本身，其余方法不改变。
+1、 Array 创建1. 利用字">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Javascript 中的 Array 操作">
+<meta property="og:url" content="http://yoursite.com/2015/10/12/JS-Array/index.html">
+<meta property="og:site_name" content="CompileYouth">
+<meta property="og:description" content="Javascript 中的 Array 操作在各种语言中，数组总是一个比较重要的数据结构，Javascript 中的 Array 也不例外。Javascript 中的 Array 提供了一系列方法可以更好地让我们操作 Array 中的元素，下面我们就来看看这些操作方法。
+Array 之基本操作在基本操作部分，我们约定，加粗的方法可以改变数组本身，其余方法不改变。
+1、 Array 创建1. 利用字">
+<meta property="og:updated_time" content="2015-10-12T01:54:18.821Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Javascript 中的 Array 操作">
+<meta name="twitter:description" content="Javascript 中的 Array 操作在各种语言中，数组总是一个比较重要的数据结构，Javascript 中的 Array 也不例外。Javascript 中的 Array 提供了一系列方法可以更好地让我们操作 Array 中的元素，下面我们就来看看这些操作方法。
+Array 之基本操作在基本操作部分，我们约定，加粗的方法可以改变数组本身，其余方法不改变。
+1、 Array 创建1. 利用字">
+  
+    <link rel="alternative" href="/atom.xml" title="CompileYouth" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+  
+
+</head>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">CompileYouth</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-JS-Array" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/10/12/JS-Array/" class="article-date">
+  <time datetime="2015-10-12T01:53:27.000Z" itemprop="datePublished">2015-10-12</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Javascript 中的 Array 操作
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Javascript_中的_Array_操作">Javascript 中的 Array 操作</h1><p>在各种语言中，数组总是一个比较重要的数据结构，Javascript 中的 Array 也不例外。Javascript 中的 Array 提供了一系列方法可以更好地让我们操作 Array 中的元素，下面我们就来看看这些操作方法。</p>
+<h2 id="Array_之基本操作">Array 之基本操作</h2><p>在基本操作部分，我们约定，加粗的方法可以改变数组本身，其余方法不改变。</p>
+<h3 id="1、_Array_创建">1、 Array 创建</h3><pre><code><span class="number">1</span>. 利用字面量创建 <span class="keyword">Array</span> （推荐）： `<span class="keyword">var</span> arr = []`;
+<span class="number">2</span>. 利用 <span class="keyword">Array</span> 对象创建 <span class="keyword">Array</span>： `<span class="keyword">var</span> arr = <span class="keyword">new</span> <span class="keyword">Array</span>([length]);`<span class="comment">//可以指定数组长度，注意不是数组上限；</span>
+<span class="number">3</span>. 利用 <span class="keyword">Array</span> 对象创建 <span class="keyword">Array</span>： `<span class="keyword">var</span> arr = <span class="keyword">new</span> <span class="keyword">Array</span>(value1, value2, value3, …);`
+</code></pre><p>注意：Javascript 中 Array 中的元素不要求类型一致；</p>
+<h3 id="2、_Array_访问元素">2、 Array 访问元素</h3><pre><code>1. `var value = arr[index];`
+2. `Array.slice(<span class="operator"><span class="keyword">start</span>[, <span class="keyword">end</span>]);</span>`//从 <span class="operator"><span class="keyword">start</span> 位置开始截取原数组至 <span class="keyword">end</span> （不包括 <span class="keyword">end</span> 位置），返回截取的数组。若省略 <span class="keyword">end</span> ，则截取 <span class="keyword">start</span> 位置后所有元素；</span>
+</code></pre><h3 id="3、_Array_添加元素">3、 Array 添加元素</h3><pre><code>1. <span class="keyword">*</span><span class="keyword">*</span>`Array.push(value1, value2, vlaue3, …);`<span class="keyword">*</span><span class="keyword">*</span>//将一个或多个元素附加在数组末尾，并返回新数组长度；
+2. <span class="keyword">*</span><span class="keyword">*</span>`Array.unshif(value1, value2, value3, …);`<span class="keyword">*</span><span class="keyword">*</span>//将一个或多个元素附加在数组开头，原数组元素依次后移，并返回新数组长度；
+</code></pre><h3 id="4、_Array_删除元素">4、 Array 删除元素</h3><pre><code>1. <span class="keyword">*</span><span class="keyword">*</span>`Array.pop();`<span class="keyword">*</span><span class="keyword">*</span>//移除数组最后一个值，并返回该元素值；
+2. <span class="keyword">*</span><span class="keyword">*</span>`Array.shift();`<span class="keyword">*</span><span class="keyword">*</span>//移除数组第一个值，并返回该元素值；
+3. <span class="keyword">*</span><span class="keyword">*</span>`Array.splice(pos, count, [value1, vlaue2, vlaue3, …]);`<span class="keyword">*</span><span class="keyword">*</span>//从数组 pos 位置开始删除 count 个元素，并在删除的位置插入value1, vlaue2, vlaue3…，并返回删除的所有元素；
+</code></pre><h3 id="5、_Array_合并">5、 Array 合并</h3><pre><code><span class="number">1</span>. `<span class="keyword">Array</span>.<span class="keyword">concat</span>(para);`<span class="comment">// para 可以为数组或元素值，也可以为两者组合，将所有元素连接成一个数组，返回连接好的数组；</span>
+</code></pre><h3 id="6、_Array_字符串化">6、 Array 字符串化</h3><pre><code><span class="number">1.</span> `<span class="javascript"><span class="built_in">Array</span>.join(sperator);</span>`<span class="regexp">//</span>返回由数组元素组成并由 seperator 分隔的字符串。若 seperator 为空，则默认以 “,” 连接；
+<span class="number">2.</span> `<span class="javascript"><span class="built_in">Array</span>.toString()</span>`和`<span class="javascript"><span class="built_in">Array</span>.toLocaleString();</span>`<span class="regexp">//</span>返回由数组元素组成并由“,”分隔的字符串（不常用）；两种方法的区别在于 toLocaleString() 会转变为本地环境字符串（如Date.toLocalString() 会转化为当地时间格式的字符串），toString() 则转为传统字符串； Array 的这两种方法用法无区别；
+</code></pre><h3 id="7、_Array_排序">7、 Array 排序</h3><pre><code>1. <span class="keyword">*</span><span class="keyword">*</span>`Array.reverse();`<span class="keyword">*</span><span class="keyword">*</span>//颠倒数组中的元素；
+2. <span class="keyword">*</span><span class="keyword">*</span>`Array.sort();`<span class="keyword">*</span><span class="keyword">*</span>//按字符编码进行排序;
+</code></pre><h3 id="8、_Array_查找">8、 Array 查找</h3><pre><code><span class="number">1</span>. `<span class="function"><span class="title">indexOf</span><span class="params">()</span></span>`<span class="comment">//返回第一个与给定参数相等的数组元素的索引，没有找到则返回-1。</span>
+<span class="number">2</span>. `<span class="function"><span class="title">lastIndexOf</span><span class="params">()</span></span>`<span class="comment">//返回在数组中搜索到的与给定参数相等的元素的最后（最大）索引。</span>
+</code></pre><h3 id="9、_其他函数">9、 其他函数</h3><pre><code><span class="number">1.</span> `<span class="javascript"><span class="built_in">Array</span>.isArray();</span>`<span class="regexp">//</span>判断某个值是否为数组；
+</code></pre><h2 id="Array_之高级操作">Array 之高级操作</h2><p>首先介绍 Array 的 5 种迭代函数。这 5 种函数的特点是都有一个 callback 函数，函数会为每一个数组元素调用一次 callback 函数。可选参数是 thisArg， 作为 callback被调用时的 this 值，如果没有传入 thisArg 值，则在非严格模式下将会是全局对象，严格模式下是 undefined。其中，callback 函数中包含三个参数，分别是当前元素的值、当前元素索引和被遍历的数组。这 5 种函数遍历的元素个数在第一次调用 callback 函数时就已经确定，即以后即使添加元素也不会改变遍历次数，未访问到且被删除的值不会被 callback 访问到，未访问到且被修改的元素被修改后，传递给 callback 的值是被修改后的值。</p>
+<h3 id="1、_Array-forEach()">1、    <code>Array.forEach()</code></h3><p>遍历并为每一项元素执行一遍 callback 函数。是 5 个函数中唯一一个没有返回值的函数。</p>
+<pre><code><span class="keyword">var</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>];
+arr.forEach(<span class="function"><span class="keyword">function</span>(<span class="params">ele</span>) </span>{
+    <span class="built_in">console</span>.log(ele);
+});
+</code></pre><p>运行结果：</p>
+<pre><code><span class="number">1</span>
+<span class="number">2</span>
+<span class="number">3</span>
+</code></pre><h3 id="2、_Array-map()">2、    <code>Array.map()</code></h3><p>遍历并处理所有元素，返回由每个 callback 函数返回值组成的新数组。</p>
+<pre><code><span class="keyword">var</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>];
+<span class="keyword">var</span> newArr = arr.map(<span class="function"><span class="keyword">function</span>(<span class="params">ele</span>) </span>{
+    <span class="keyword">return</span> <span class="string">"element"</span> + ele;
+});
+<span class="built_in">console</span>.log(newArr);
+<span class="built_in">console</span>.log(arr);
+</code></pre><p>运行结果：</p>
+<pre><code>[<span class="string">"element1"</span>, <span class="string">"element2"</span>, <span class="string">"element3"</span>]
+[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]
+</code></pre><h3 id="3、_Array-filter()">3、    <code>Array.filter()</code></h3><p>遍历所有元素，过滤掉不符合条件（即使得 callback 返回 false）的元素。</p>
+<pre><code>var arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">11</span>, <span class="number">12</span>, <span class="number">13</span>];
+var newArr = arr.filter(function(ele) {
+    <span class="keyword">return</span> ele &gt; <span class="number">10</span>;
+});
+console.<span class="built_in">log</span>(newArr);
+console.<span class="built_in">log</span>(arr);
+</code></pre><p>运行结果： </p>
+<pre><code>[<span class="number">11</span>, <span class="number">12</span>, <span class="number">13</span>]
+[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">11</span>, <span class="number">12</span>, <span class="number">13</span>]
+</code></pre><h3 id="4、_Array-every()">4、    <code>Array.every()</code></h3><p>遍历所有元素，当所有元素使得 callback 返回 true,则返回 true，否则返回 false。</p>
+<pre><code><span class="keyword">var</span> arr1 = [<span class="number">9</span>, <span class="number">12</span>, <span class="number">13</span>];
+<span class="keyword">var</span> result1 = arr1.every(<span class="function"><span class="keyword">function</span>(<span class="params">ele</span>) </span>{
+    <span class="keyword">return</span> ele &gt; <span class="number">10</span>;
+});
+
+<span class="keyword">var</span> arr2 = [<span class="number">11</span>, <span class="number">12</span>, <span class="number">13</span>];
+<span class="keyword">var</span> result2 = arr2.every(<span class="function"><span class="keyword">function</span>(<span class="params">ele</span>) </span>{
+    <span class="keyword">return</span> ele &gt; <span class="number">10</span>;
+});
+
+<span class="built_in">console</span>.log(arr1);
+<span class="built_in">console</span>.log(<span class="string">"result1:"</span> + result1);
+<span class="built_in">console</span>.log(arr2);
+<span class="built_in">console</span>.log(<span class="string">"result2:"</span> + result2);
+</code></pre><p>运行结果：</p>
+<pre><code>[<span class="number">9</span>, <span class="number">12</span>, <span class="number">13</span>]
+result1:<span class="literal">false</span>
+[<span class="number">11</span>, <span class="number">12</span>, <span class="number">13</span>]
+result2:<span class="literal">true</span>
+</code></pre><h3 id="5、_Array-some()">5、    <code>Array.some()</code></h3><p>遍历所有元素，只要找到一个元素使得 callback 返回 true，则返回 true，否则返回 false。</p>
+<pre><code>var arr1 = [<span class="number">1</span>,<span class="number">3</span>,<span class="number">5</span>,<span class="number">7</span>,<span class="number">9</span>];
+var result1 = arr1.some(function(ele) {
+    <span class="keyword">return</span> ele &gt; <span class="number">10</span>;
+});
+
+var arr2 = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">11</span>];
+var result2 = arr2.some(function(ele) {
+    <span class="keyword">return</span> ele &gt; <span class="number">10</span>;
+});
+
+console.<span class="built_in">log</span>(arr1);
+console.<span class="built_in">log</span>(<span class="string">"result1:"</span> + result1);
+console.<span class="built_in">log</span>(arr2);
+console.<span class="built_in">log</span>(<span class="string">"result2:"</span> + result2);
+</code></pre><p>运行结果：</p>
+<pre><code>[<span class="number">1</span>, <span class="number">3</span>, <span class="number">5</span>, <span class="number">7</span>, <span class="number">9</span>]
+result1:<span class="literal">false</span>
+[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">11</span>]
+result2:<span class="literal">true</span>
+</code></pre><hr>
+<h3 id="6、_Array-reduce()">6、    <code>Array.reduce()</code></h3><p>将数组中的元素从左到右进行缩减，最终缩减为一个值。</p>
+<p><code>Array.reduce()</code>语法：  </p>
+<pre><code><span class="keyword">Array</span>.reduce(<span class="function"><span class="keyword">function</span><span class="params">(previousValue, currentValue, <span class="keyword">index</span>, <span class="keyword">array</span>)</span><span class="comment">{
+
+}</span>, [<span class="title">initialValue</span>]);</span>
+</code></pre><p>callback 函数的几个参数含义：</p>
+<ul>
+<li>previousValue：上一次执行 callback 函数后返回的值</li>
+<li>currentValue：当前数组元素值</li>
+<li>index：当前数组元素索引</li>
+<li>array：遍历的数组对象</li>
+</ul>
+<p>第一次调用 callback 函数时，如果 initialValue 有值，则 previousValue 为 initialValue，<br>currentValue 为数组第一个元素。否则 previousValue 为数组第一个元素，currentValue 为数组第二个元素。</p>
+<pre><code><span class="keyword">var</span> arr = [<span class="string">"a"</span>, <span class="string">"b"</span>, <span class="string">"c"</span>];
+arr.reduce(<span class="function"><span class="keyword">function</span>(<span class="params">pre, cur, ind, array</span>) </span>{
+    <span class="built_in">console</span>.log(ind);
+});
+</code></pre><p>运行结果：</p>
+<pre><code><span class="number">1</span>
+<span class="number">2</span>
+</code></pre><p>再看另一个有 initialValue 的例子：</p>
+<pre><code><span class="keyword">var</span> arr = [<span class="string">"a"</span>, <span class="string">"b"</span>, <span class="string">"c"</span>];
+arr.reduce(<span class="function"><span class="keyword">function</span>(<span class="params">pre, cur, ind, array</span>) </span>{
+    <span class="built_in">console</span>.log(ind);
+}, <span class="string">"z"</span>);
+</code></pre><p>运行结果是：</p>
+<pre><code><span class="number">0</span>
+<span class="number">1</span>
+<span class="number">2</span>
+</code></pre><hr>
+<hr>
+<p>随着 ES6 的诞生，Array 出现了更多的方法。考虑到浏览器的兼容性，在使用下面的方法时需要注意所使用的浏览器是否支持。</p>
+<h3 id="7、Array-from()">7、<code>Array.from()</code></h3><p>将一个类数组对象或可迭代对象转换成真实的数组。</p>
+<ul>
+<li>类数组对象： 拥有一个 length 属性和若干索引属性的任意对象</li>
+<li>可迭代对象： 你可以从它身上迭代出若干个元素的对象，比如有 Map 和 Set 等（Map 与 Set 均为 ES6 中新的对象）</li>
+</ul>
+<pre><code><span class="keyword">var</span> arr = <span class="built_in">Array</span>.from(<span class="string">"Hello"</span>);
+<span class="built_in">console</span>.log(arr);
+</code></pre><p>运行结果：</p>
+<pre><code>[ <span class="string">"H"</span>, <span class="string">"e"</span>, <span class="string">"l"</span>, <span class="string">"l"</span>, <span class="string">"o"</span> ]
+</code></pre><h3 id="8、Array-values()">8、<code>Array.values()</code></h3><p>将一个数组转换成一个可迭代的对象，该对象包含数组每个索引的值。</p>
+<pre><code><span class="keyword">var</span> arr = [<span class="string">'a'</span>, <span class="string">'b'</span>, <span class="string">'c'</span>];
+<span class="keyword">var</span> obj = arr.values();
+<span class="keyword">for</span> (<span class="keyword">let</span> letter <span class="keyword">of</span> obj) {
+    <span class="built_in">console</span>.log(letter);
+}
+</code></pre><p>运行结果：</p>
+<pre><code><span class="tag">a</span>
+<span class="tag">b</span>
+c
+</code></pre>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2015/10/12/JS-Array/" data-id="cifnaf1az0000ksn6jw9blqfv" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2015/10/12/JavaScript-for-loop/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          JS中的 for 循环
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2015/10/09/console-in-JavaScript/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Javascript 中 console 的用法</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  
+    
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/10/">October 2015</a><span class="archive-list-count">4</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2015/10/12/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2015/10/12/JavaScript-for-loop/">JS中的 for 循环</a>
+          </li>
+        
+          <li>
+            <a href="/2015/10/12/JS-Array/">Javascript 中的 Array 操作</a>
+          </li>
+        
+          <li>
+            <a href="/2015/10/09/console-in-JavaScript/">Javascript 中 console 的用法</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2015 CompileYouth<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+  <script src="/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
+
+
+<script src="/js/script.js" type="text/javascript"></script>
+
+  </div>
+</body>
+</html>
